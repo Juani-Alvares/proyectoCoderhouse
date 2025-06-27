@@ -1,0 +1,219 @@
+/*Estilos Generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Passion One", sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+}
+.logotipo{
+    width: .4rem;
+    height: .5rem;
+}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+a{
+    text-decoration: none;
+}
+li{
+    margin: 0.5rem;
+    padding: 2px;
+}
+h1{
+    color: red;
+}
+h4{
+    color: #ffffff;
+}
+.oscurecer-header{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #281505be;
+}
+.wpplogo{
+    width: 5rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    padding: 10px;
+    z-index: 2;
+}
+.fondo-wpp{
+    width: 5rem;
+    background-color: #000;
+    height: 5rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estilos Header */
+.index-header-flex{ 
+    font-size: 20px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 1rem;
+}
+.index-header, .index-header__sucursales {
+    background-image: url(../image/header-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+    position: relative;
+    background-position: center;
+}
+.index-header__sucursales{
+    background-image: url(../image/sucursales-header.jpg);
+}
+.contenedor-inferior-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 30rem;
+    margin-left: 1rem;
+}
+.navegacion-superior ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.index-p , .index-h1{
+    text-align: center;
+    color: #ffffff;
+    
+}
+.btn-header{
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    border: none;
+    font-weight: 600;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Estilos Main */
+.sucursales-main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iframeMap{
+    width: 90%;
+}
+.index-main{
+    margin: 2rem 0;
+}
+.UltimosModelos-Titulo{
+    text-align: center;
+}
+.UltimosModelos-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+.card-zapas:hover{
+    transform: scale(0.8);
+    transition: all 0.4s ease-in-out;
+
+}
+.card-zapas{
+    width: 22rem;
+    background-color: rgba(0, 0, 0, 0.222);
+    border-radius: 10px;
+}
+.card-zapas img{
+    width: 100%;
+}
+.card-zapas-precio{
+    color: #008000;
+    font-weight: 600;
+    text-align: center;
+}
+.card-zapas-precio span{
+    text-decoration: line-through;
+    color: #000;
+}
+.card-zapas-btn{
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    text-transform: uppercase;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+/* Estilos Footer */
+.footer-derechos{
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+}
+.footer-redes{
+    display: flex;
+    object-fit: cover;
+    height: 4rem;
+    width: 4rem;
+}
+footer{
+    background-color: #000000a9;
+}
+
+    /*Grid-Footer*/
+
+.footer-medios_de_pago, .footer-sucursales, .footer-contacto {
+    background-color: rgba(55, 55, 55, 0.914);
+    color: #ffffff;
+    padding: 1rem;
+}
+        
+.footer-container-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+
+justify-content: center;
+}
+
+.footer-medios_de_pago { grid-area: 1 / 1 / 3 / 3; }
+.footer-sucursales { grid-area: 1 / 3 / 3 / 4; }
+.footer-contacto { grid-area: 3 / 1 / 4 / 4; }
+
+/* Media Queries */
+
+@media only screen and (min-width:900px){
+    ul, .index-header-flex {
+        flex-direction: row;
+    }
+    .footer-redes { grid-area: 1 / 1 / 3 / 3; }
+    .footer-sucursales { grid-area: 1 / 3 / 3 / 4; }
+    .footer-contacto { grid-area: 3 / 1 / 4 / 4; }
+    .sucursales-main-container{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .iframmeMap{
+        width: 50%;
+    }
+}
