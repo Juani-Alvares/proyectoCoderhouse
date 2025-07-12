@@ -1,3 +1,7 @@
+@use "./utilities/variables";
+@use "./utilities/extend";
+
+@import "./utilities/mixins.scss";
 
 @import "./utilities/extend.scss";
 @import "./utilities/variables.scss";
@@ -24,27 +28,27 @@ ul{
     list-style: none;
     @extend %flexColumn;
     gap: 2rem;
-    color: $color_negro;
+    color: variables.$color_negro;
 }
 a{
     text-decoration: none;
-    color: $color_blanco;
+    color: variables.$color_blanco;
 }
 li{
     margin: 0.5rem;
     padding: 2px;
 }
 h1{
-    color: $color_rojo;
+    color: variables.$color_rojo;
 }
 h4{
-    color: $color_blanco;
+    color: variables.$color_blanco;
 }
 .oscurecer-header{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: $backgroundOscurer;
+    background-color: variables.$backgroundOscurer;
 }
 .wpplogo{
     width: 5rem;
@@ -56,7 +60,7 @@ h4{
 }
 .fondo-wpp{
     width: 5rem;
-    background-color: $color_negro;
+    background-color: variables.$color_negro;
     height: 5rem;
     border-radius: 50%;
    @extend %flexColumn;
@@ -64,7 +68,7 @@ h4{
 
 /* Estilos Footer */
 .footer-derechos{
-    color: $color_blanco;
+    color: variables.$color_blanco;
     text-align: center;
     font-weight: 500;
 }
